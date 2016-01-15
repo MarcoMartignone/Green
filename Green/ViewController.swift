@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     func setupCamera(){
         videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSessionPresetHigh, cameraPosition: .Back)
         
-        videoCamera!.outputImageOrientation = .Portrait;
+        videoCamera!.outputImageOrientation = .LandscapeRight;
         
         //Create the filter
         filter = GPUImageChromaKeyBlendFilter()
