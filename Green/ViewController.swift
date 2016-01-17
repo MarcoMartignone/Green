@@ -2,7 +2,7 @@ import UIKit
 import GPUImage
 import AssetsLibrary
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIGestureRecognizerDelegate{
     var videoCamera:GPUImageVideoCamera?
     var filter:GPUImageChromaKeyBlendFilter?
     var pathToMovie: String!
@@ -24,14 +24,18 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.whiteColor()
         gpuImage.backgroundColor = UIColor.whiteColor()
-        
-        if let resourceUrl = NSBundle.mainBundle().URLForResource("small", withExtension: "mp4") {
+
+        if let resourceUrl = NSBundle.mainBundle().URLForResource("do", withExtension: "mp4") {
             print(resourceUrl)
             if NSFileManager.defaultManager().fileExistsAtPath(resourceUrl.path!) {
                 backgroundMovie = GPUImageMovie.init(URL: resourceUrl)
                 backgroundMovie.shouldRepeat = true
             }
         }
+        
+        let tap = UITapGestureRecognizer(target: self, action: "takePhoto")
+        tap.delegate = self
+        gpuImage.addGestureRecognizer(tap)
         
         // Setup camera processing
         setupCamera()
@@ -68,6 +72,18 @@ class ViewController: UIViewController {
         
         //Start showing filter output on view
         filter?.addTarget(gpuImage)
+    }
+    
+    func captureThis() {
+        let image = filter?.imageFromCurrentFramebuffer()
+        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+        
+        print("PIC TAKEN")
+    }
+    
+    func takePhoto() {
+        filter?.useNextFrameForImageCapture()
+        self.captureThis()
     }
     
     override func prefersStatusBarHidden() -> Bool {

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E193EBB1C496C5C00A4ED74 /* galaxy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4E193EB71C49647D00A4ED74 /* galaxy.mp4 */; };
+		4E193EBC1C496C6100A4ED74 /* do.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4E193EBA1C49673400A4ED74 /* do.mp4 */; };
+		4E193EBE1C496E9400A4ED74 /* gal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4E193EBD1C496E8900A4ED74 /* gal.mp4 */; };
+		4E193EC91C497F8600A4ED74 /* loop.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4E193EC81C497F8600A4ED74 /* loop.mov */; };
+		4E193ECB1C497FE000A4ED74 /* loop2.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4E193ECA1C497FE000A4ED74 /* loop2.mov */; };
 		4EF5A8F71C4824630000FA62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A8F61C4824630000FA62 /* AppDelegate.swift */; };
 		840B51E41C31D3E000DD064E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840B51E31C31D3E000DD064E /* AVFoundation.framework */; };
 		8420A0A81C2A7133003EE861 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8420A0A51C2A711A003EE861 /* GPUImage.framework */; };
@@ -76,6 +81,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E193EB71C49647D00A4ED74 /* galaxy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = galaxy.mp4; sourceTree = "<group>"; };
+		4E193EBA1C49673400A4ED74 /* do.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = do.mp4; sourceTree = "<group>"; };
+		4E193EBD1C496E8900A4ED74 /* gal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gal.mp4; sourceTree = "<group>"; };
+		4E193EC81C497F8600A4ED74 /* loop.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = loop.mov; path = ../loop.mov; sourceTree = "<group>"; };
+		4E193ECA1C497FE000A4ED74 /* loop2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = loop2.mov; sourceTree = "<group>"; };
 		4EF5A8F61C4824630000FA62 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		840B51E31C31D3E000DD064E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8420A09C1C2A711A003EE861 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = framework/GPUImage.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -193,7 +203,12 @@
 				BC73FD2519612C19004A9191 /* ViewController.swift */,
 				BC73FD2719612C19004A9191 /* Main.storyboard */,
 				BC73FD2A19612C19004A9191 /* Images.xcassets */,
+				4E193EC81C497F8600A4ED74 /* loop.mov */,
+				4E193EBA1C49673400A4ED74 /* do.mp4 */,
+				4E193EB71C49647D00A4ED74 /* galaxy.mp4 */,
 				844B9ACB1C2A082000FADC53 /* small.mp4 */,
+				4E193EBD1C496E8900A4ED74 /* gal.mp4 */,
+				4E193ECA1C497FE000A4ED74 /* loop2.mov */,
 				849D05371C2A693B0070DF03 /* Icons */,
 				BC73FD2119612C19004A9191 /* Supporting Files */,
 			);
@@ -293,6 +308,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E193EC91C497F8600A4ED74 /* loop.mov in Resources */,
+				4E193EBE1C496E9400A4ED74 /* gal.mp4 in Resources */,
+				4E193EBC1C496C6100A4ED74 /* do.mp4 in Resources */,
+				4E193EBB1C496C5C00A4ED74 /* galaxy.mp4 in Resources */,
 				849D055E1C2A693B0070DF03 /* Icon-Small-50.png in Resources */,
 				BC73FD2919612C19004A9191 /* Main.storyboard in Resources */,
 				849D055F1C2A693B0070DF03 /* Icon-Small-50@2x.png in Resources */,
@@ -316,6 +335,7 @@
 				849D05501C2A693B0070DF03 /* Icon-40.png in Resources */,
 				849D055C1C2A693B0070DF03 /* Icon-72.png in Resources */,
 				849D05531C2A693B0070DF03 /* Icon-60@2x.png in Resources */,
+				4E193ECB1C497FE000A4ED74 /* loop2.mov in Resources */,
 				849D05591C2A693B0070DF03 /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

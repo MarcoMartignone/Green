@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BC73FD1D19612C19004A9191"
-               BuildableName = "GreenScreenForGrey.app"
+               BuildableName = "Green.app"
                BlueprintName = "Green"
                ReferencedContainer = "container:Green.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC73FD1D19612C19004A9191"
-            BuildableName = "GreenScreenForGrey.app"
+            BuildableName = "Green.app"
             BlueprintName = "Green"
             ReferencedContainer = "container:Green.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC73FD1D19612C19004A9191"
-            BuildableName = "GreenScreenForGrey.app"
+            BuildableName = "Green.app"
             BlueprintName = "Green"
             ReferencedContainer = "container:Green.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BC73FD1D19612C19004A9191"
-            BuildableName = "GreenScreenForGrey.app"
+            BuildableName = "Green.app"
             BlueprintName = "Green"
             ReferencedContainer = "container:Green.xcodeproj">
          </BuildableReference>
