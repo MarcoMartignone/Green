@@ -1,12 +1,15 @@
 import UIKit
+import AudioToolbox
 import GPUImage
 import AssetsLibrary
+import FBSDKMessengerShareKit
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate{
     var videoCamera:GPUImageVideoCamera?
     var filter:GPUImageChromaKeyBlendFilter?
     var pathToMovie: String!
     var effectSlider: float_t!
+    var savedImage: UIImage!
     
     @IBOutlet weak var gpuImage: GPUImageView!
     var backgroundMovie: GPUImageMovie!
@@ -33,15 +36,25 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
             }
         }
         
+        // Setup view tappable area
         let tap = UITapGestureRecognizer(target: self, action: "takePhoto")
-        tap.delegate = self
+        tap.numberOfTapsRequired = 1;
         gpuImage.addGestureRecognizer(tap)
+        
+        let doubleTap = UITapGestureRecognizer(target: self, action: "switchCamera")
+        doubleTap.numberOfTapsRequired = 2
+        gpuImage.addGestureRecognizer(doubleTap)
+        tap.requireGestureRecognizerToFail(doubleTap)
+        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: "sharePhoto")
+        swipeUp.direction = UISwipeGestureRecognizerDirection.Up
+        gpuImage.addGestureRecognizer(swipeUp)
         
         // Setup camera processing
         setupCamera()
     }
     
-    //Resume Processing
+    // Resume Processing
     func resumeActivities() {
         videoCamera?.startCameraCapture()
         backgroundMovie.startProcessing()
@@ -57,7 +70,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
     func setupCamera(){
         videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSessionPresetHigh, cameraPosition: .Back)
         
-        videoCamera!.outputImageOrientation = .LandscapeRight;
+        videoCamera!.outputImageOrientation = .Portrait;
         
         //Create the filter
         filter = GPUImageChromaKeyBlendFilter()
@@ -75,8 +88,11 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
     }
     
     func captureThis() {
-        let image = filter?.imageFromCurrentFramebuffer()
-        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+        let image = (filter?.imageFromCurrentFramebuffer())!
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        
+        savedImage = image
         
         print("PIC TAKEN")
     }
@@ -84,6 +100,16 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
     func takePhoto() {
         filter?.useNextFrameForImageCapture()
         self.captureThis()
+    }
+    
+    func switchCamera() {
+        videoCamera!.rotateCamera()
+    }
+    
+    func sharePhoto() {
+        if (savedImage != nil) {
+            FBSDKMessengerSharer.shareImage(savedImage, withOptions: nil)
+        }
     }
     
     override func prefersStatusBarHidden() -> Bool {

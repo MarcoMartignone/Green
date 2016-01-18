@@ -12,6 +12,7 @@
 		4E193EBE1C496E9400A4ED74 /* gal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4E193EBD1C496E8900A4ED74 /* gal.mp4 */; };
 		4E193EC91C497F8600A4ED74 /* loop.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4E193EC81C497F8600A4ED74 /* loop.mov */; };
 		4E193ECB1C497FE000A4ED74 /* loop2.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4E193ECA1C497FE000A4ED74 /* loop2.mov */; };
+		4E91E5A51C4D528700F59FAC /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E91E5A31C4D528700F59FAC /* FBSDKMessengerShareKit.framework */; };
 		4EF5A8F71C4824630000FA62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A8F61C4824630000FA62 /* AppDelegate.swift */; };
 		840B51E41C31D3E000DD064E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840B51E31C31D3E000DD064E /* AVFoundation.framework */; };
 		8420A0A81C2A7133003EE861 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8420A0A51C2A711A003EE861 /* GPUImage.framework */; };
@@ -86,6 +87,7 @@
 		4E193EBD1C496E8900A4ED74 /* gal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gal.mp4; sourceTree = "<group>"; };
 		4E193EC81C497F8600A4ED74 /* loop.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = loop.mov; path = ../loop.mov; sourceTree = "<group>"; };
 		4E193ECA1C497FE000A4ED74 /* loop2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = loop2.mov; sourceTree = "<group>"; };
+		4E91E5A31C4D528700F59FAC /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		4EF5A8F61C4824630000FA62 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		840B51E31C31D3E000DD064E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8420A09C1C2A711A003EE861 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = framework/GPUImage.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -125,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				840B51E41C31D3E000DD064E /* AVFoundation.framework in Frameworks */,
+				4E91E5A51C4D528700F59FAC /* FBSDKMessengerShareKit.framework in Frameworks */,
 				8420A0A81C2A7133003EE861 /* GPUImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +185,7 @@
 		BC73FD1519612C19004A9191 = {
 			isa = PBXGroup;
 			children = (
+				4E91E5A31C4D528700F59FAC /* FBSDKMessengerShareKit.framework */,
 				840B51E31C31D3E000DD064E /* AVFoundation.framework */,
 				BC73FD2019612C19004A9191 /* Green */,
 				BC73FD1F19612C19004A9191 /* Products */,
@@ -461,6 +465,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Green/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -477,6 +485,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Green/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
