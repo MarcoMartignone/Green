@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Green/ViewController.swift"
-            timestampString = "474913429.716197"
+            timestampString = "475417656.758275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "longPressAction(_:)"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "takePhoto()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Green/ViewController.swift"
-            timestampString = "474913510.959419"
+            timestampString = "475417656.758275"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "longPressAction(_:)"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "setupCamera()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

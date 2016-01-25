@@ -8,11 +8,9 @@ import QuartzCore
 class ViewController: UIViewController, UIGestureRecognizerDelegate{
     var videoCamera:GPUImageVideoCamera?
     var filter:GPUImageChromaKeyBlendFilter?
-    var pathToMovie: String!
     var effectSlider: float_t!
     var savedImage: UIImage!
     var backgroundMovie: GPUImageMovie!
-    var movieWriter: GPUImageMovieWriter!
     @IBOutlet weak var gpuImage: GPUImageView!
     @IBOutlet var borderView: UIView!
     
@@ -49,9 +47,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
         swipeUp.direction = UISwipeGestureRecognizerDirection.Up
         gpuImage.addGestureRecognizer(swipeUp)
         
-        let longPress = UILongPressGestureRecognizer(target: self, action: "longPressAction:")
-        gpuImage.addGestureRecognizer(longPress)
-        
         // Setup borderView
         borderView.backgroundColor = UIColor.clearColor()
         borderView.layer.borderColor = UIColor.whiteColor().CGColor
@@ -61,7 +56,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
         // Setup camera processing
         setupCamera()
     }
-    
+        
     // Called on start
     func setupCamera() {
         videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSessionPresetHigh, cameraPosition: .Back)
@@ -83,26 +78,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
         filter?.addTarget(gpuImage)
     }
     
-    func longPressAction(gestureRecognizer:UIGestureRecognizer) {
-        if gestureRecognizer.state == UIGestureRecognizerState.Began {
-            setupRecording()
-        } else if gestureRecognizer.state == UIGestureRecognizerState.Ended {
-            movieWriter.finishRecording()
-        }
-    }
-    
-    func setupRecording() {
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
-        pathToMovie = documentsPath + "/stream.m4v"
-        print("pathToMovie \(pathToMovie)")
-        unlink((pathToMovie as NSString).UTF8String)
-        let movieURL = NSURL.fileURLWithPath(pathToMovie)
-        movieWriter = GPUImageMovieWriter(movieURL: movieURL, size: CGSizeMake(680, 480))
-        movieWriter!.encodingLiveVideo = true
-        
-        movieWriter.startRecording()
-    }
-    
     func captureThis() {
         let image = (filter?.imageFromCurrentFramebuffer())!
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
@@ -111,8 +86,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
         flashBorderView()
         
         savedImage = image
-        
-        print("PIC TAKEN")
     }
     
     func takePhoto() {
@@ -140,15 +113,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
     func stopActivities() {
         videoCamera!.stopCameraCapture()
         backgroundMovie.endProcessing()
-        movieWriter.finishRecording()
-        
-        videoCamera!.stopCameraCapture()
-        movieWriter!.finishRecordingWithCompletionHandler { () -> Void in
-            //            if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(self.pathToMovie))
-            
-            UISaveVideoAtPathToSavedPhotosAlbum(self.pathToMovie, self,
-                "video:didFinishSavingWithError:contextInfo:", nil)
-        }
     }
     
     func flashBorderView() {

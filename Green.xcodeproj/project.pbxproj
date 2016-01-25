@@ -16,7 +16,6 @@
 		840B51E41C31D3E000DD064E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840B51E31C31D3E000DD064E /* AVFoundation.framework */; };
 		8420A0A81C2A7133003EE861 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8420A0A51C2A711A003EE861 /* GPUImage.framework */; };
 		8420A0A91C2A7140003EE861 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8420A0A51C2A711A003EE861 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		844B9ACD1C2A085900FADC53 /* small.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 844B9ACB1C2A082000FADC53 /* small.mp4 */; };
 		849D054F1C2A693B0070DF03 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 849D05391C2A693B0070DF03 /* Contents.json */; };
 		849D05501C2A693B0070DF03 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 849D053A1C2A693B0070DF03 /* Icon-40.png */; };
 		849D05511C2A693B0070DF03 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849D053B1C2A693B0070DF03 /* Icon-40@2x.png */; };
@@ -91,7 +90,6 @@
 		4EF5A8F61C4824630000FA62 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		840B51E31C31D3E000DD064E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8420A09C1C2A711A003EE861 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = framework/GPUImage.xcodeproj; sourceTree = SOURCE_ROOT; };
-		844B9ACB1C2A082000FADC53 /* small.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = small.mp4; sourceTree = "<group>"; };
 		849D05391C2A693B0070DF03 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		849D053A1C2A693B0070DF03 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		849D053B1C2A693B0070DF03 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 				BC73FD2A19612C19004A9191 /* Images.xcassets */,
 				4E193EBA1C49673400A4ED74 /* do.mp4 */,
 				4E193EB71C49647D00A4ED74 /* galaxy.mp4 */,
-				844B9ACB1C2A082000FADC53 /* small.mp4 */,
 				4E193EBD1C496E8900A4ED74 /* gal.mp4 */,
 				849D05371C2A693B0070DF03 /* Icons */,
 				BC73FD2119612C19004A9191 /* Supporting Files */,
@@ -327,7 +324,6 @@
 				849D055E1C2A693B0070DF03 /* Icon-Small-50.png in Resources */,
 				BC73FD2919612C19004A9191 /* Main.storyboard in Resources */,
 				849D055F1C2A693B0070DF03 /* Icon-Small-50@2x.png in Resources */,
-				844B9ACD1C2A085900FADC53 /* small.mp4 in Resources */,
 				849D055D1C2A693B0070DF03 /* Icon-72@2x.png in Resources */,
 				849D05611C2A693B0070DF03 /* Icon@2x.png in Resources */,
 				BC73FD2B19612C19004A9191 /* Images.xcassets in Resources */,
