@@ -10,14 +10,12 @@
 		4E193EBB1C496C5C00A4ED74 /* galaxy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4E193EB71C49647D00A4ED74 /* galaxy.mp4 */; };
 		4E193EBC1C496C6100A4ED74 /* do.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4E193EBA1C49673400A4ED74 /* do.mp4 */; };
 		4E193EBE1C496E9400A4ED74 /* gal.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4E193EBD1C496E8900A4ED74 /* gal.mp4 */; };
-		4E193EC91C497F8600A4ED74 /* loop.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4E193EC81C497F8600A4ED74 /* loop.mov */; };
-		4E193ECB1C497FE000A4ED74 /* loop2.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4E193ECA1C497FE000A4ED74 /* loop2.mov */; };
+		4E3D263F1C4DC0D800B0FE9A /* BKEAnimatedGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3D263E1C4DC0D800B0FE9A /* BKEAnimatedGradientView.m */; };
 		4E91E5A51C4D528700F59FAC /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E91E5A31C4D528700F59FAC /* FBSDKMessengerShareKit.framework */; };
 		4EF5A8F71C4824630000FA62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF5A8F61C4824630000FA62 /* AppDelegate.swift */; };
 		840B51E41C31D3E000DD064E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840B51E31C31D3E000DD064E /* AVFoundation.framework */; };
 		8420A0A81C2A7133003EE861 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8420A0A51C2A711A003EE861 /* GPUImage.framework */; };
 		8420A0A91C2A7140003EE861 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8420A0A51C2A711A003EE861 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		844B9ACD1C2A085900FADC53 /* small.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 844B9ACB1C2A082000FADC53 /* small.mp4 */; };
 		849D054F1C2A693B0070DF03 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 849D05391C2A693B0070DF03 /* Contents.json */; };
 		849D05501C2A693B0070DF03 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 849D053A1C2A693B0070DF03 /* Icon-40.png */; };
 		849D05511C2A693B0070DF03 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 849D053B1C2A693B0070DF03 /* Icon-40@2x.png */; };
@@ -85,13 +83,13 @@
 		4E193EB71C49647D00A4ED74 /* galaxy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = galaxy.mp4; sourceTree = "<group>"; };
 		4E193EBA1C49673400A4ED74 /* do.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = do.mp4; sourceTree = "<group>"; };
 		4E193EBD1C496E8900A4ED74 /* gal.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gal.mp4; sourceTree = "<group>"; };
-		4E193EC81C497F8600A4ED74 /* loop.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = loop.mov; path = ../loop.mov; sourceTree = "<group>"; };
-		4E193ECA1C497FE000A4ED74 /* loop2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = loop2.mov; sourceTree = "<group>"; };
+		4E3D263C1C4DC0D800B0FE9A /* Green-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Green-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E3D263D1C4DC0D800B0FE9A /* BKEAnimatedGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKEAnimatedGradientView.h; sourceTree = "<group>"; };
+		4E3D263E1C4DC0D800B0FE9A /* BKEAnimatedGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKEAnimatedGradientView.m; sourceTree = "<group>"; };
 		4E91E5A31C4D528700F59FAC /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		4EF5A8F61C4824630000FA62 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		840B51E31C31D3E000DD064E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8420A09C1C2A711A003EE861 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = framework/GPUImage.xcodeproj; sourceTree = SOURCE_ROOT; };
-		844B9ACB1C2A082000FADC53 /* small.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = small.mp4; sourceTree = "<group>"; };
 		849D05391C2A693B0070DF03 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		849D053A1C2A693B0070DF03 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		849D053B1C2A693B0070DF03 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -135,6 +133,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E3D263B1C4DC0BC00B0FE9A /* Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				4E3D263D1C4DC0D800B0FE9A /* BKEAnimatedGradientView.h */,
+				4E3D263E1C4DC0D800B0FE9A /* BKEAnimatedGradientView.m */,
+				4E3D263C1C4DC0D800B0FE9A /* Green-Bridging-Header.h */,
+			);
+			name = Gradient;
+			sourceTree = "<group>";
+		};
 		8420A09D1C2A711A003EE861 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,16 +211,14 @@
 		BC73FD2019612C19004A9191 /* Green */ = {
 			isa = PBXGroup;
 			children = (
+				4E3D263B1C4DC0BC00B0FE9A /* Gradient */,
 				4EF5A8F61C4824630000FA62 /* AppDelegate.swift */,
 				BC73FD2519612C19004A9191 /* ViewController.swift */,
 				BC73FD2719612C19004A9191 /* Main.storyboard */,
 				BC73FD2A19612C19004A9191 /* Images.xcassets */,
-				4E193EC81C497F8600A4ED74 /* loop.mov */,
 				4E193EBA1C49673400A4ED74 /* do.mp4 */,
 				4E193EB71C49647D00A4ED74 /* galaxy.mp4 */,
-				844B9ACB1C2A082000FADC53 /* small.mp4 */,
 				4E193EBD1C496E8900A4ED74 /* gal.mp4 */,
-				4E193ECA1C497FE000A4ED74 /* loop2.mov */,
 				849D05371C2A693B0070DF03 /* Icons */,
 				BC73FD2119612C19004A9191 /* Supporting Files */,
 			);
@@ -256,7 +262,7 @@
 		BC73FD1619612C19004A9191 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Sunset Lake Software";
 				TargetAttributes = {
@@ -312,14 +318,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E193EC91C497F8600A4ED74 /* loop.mov in Resources */,
 				4E193EBE1C496E9400A4ED74 /* gal.mp4 in Resources */,
 				4E193EBC1C496C6100A4ED74 /* do.mp4 in Resources */,
 				4E193EBB1C496C5C00A4ED74 /* galaxy.mp4 in Resources */,
 				849D055E1C2A693B0070DF03 /* Icon-Small-50.png in Resources */,
 				BC73FD2919612C19004A9191 /* Main.storyboard in Resources */,
 				849D055F1C2A693B0070DF03 /* Icon-Small-50@2x.png in Resources */,
-				844B9ACD1C2A085900FADC53 /* small.mp4 in Resources */,
 				849D055D1C2A693B0070DF03 /* Icon-72@2x.png in Resources */,
 				849D05611C2A693B0070DF03 /* Icon@2x.png in Resources */,
 				BC73FD2B19612C19004A9191 /* Images.xcassets in Resources */,
@@ -339,7 +343,6 @@
 				849D05501C2A693B0070DF03 /* Icon-40.png in Resources */,
 				849D055C1C2A693B0070DF03 /* Icon-72.png in Resources */,
 				849D05531C2A693B0070DF03 /* Icon-60@2x.png in Resources */,
-				4E193ECB1C497FE000A4ED74 /* loop2.mov in Resources */,
 				849D05591C2A693B0070DF03 /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EF5A8F71C4824630000FA62 /* AppDelegate.swift in Sources */,
+				4E3D263F1C4DC0D800B0FE9A /* BKEAnimatedGradientView.m in Sources */,
 				BC73FD2619612C19004A9191 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -475,6 +480,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mm.Green;
 				PRODUCT_NAME = Green;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Green/Green-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -483,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -495,6 +503,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mm.Green;
 				PRODUCT_NAME = Green;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Green/Green-Bridging-Header.h";
 			};
 			name = Release;
 		};

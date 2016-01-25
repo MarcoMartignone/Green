@@ -3,32 +3,29 @@ import AudioToolbox
 import GPUImage
 import AssetsLibrary
 import FBSDKMessengerShareKit
+import QuartzCore
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate{
     var videoCamera:GPUImageVideoCamera?
     var filter:GPUImageChromaKeyBlendFilter?
-    var pathToMovie: String!
     var effectSlider: float_t!
     var savedImage: UIImage!
-    
-    @IBOutlet weak var gpuImage: GPUImageView!
     var backgroundMovie: GPUImageMovie!
-
+    @IBOutlet weak var gpuImage: GPUImageView!
+    @IBOutlet var borderView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resumeActivities", name: UIApplicationDidBecomeActiveNotification, object: nil);
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "stopActivities", name: UIApplicationWillResignActiveNotification, object: nil);
         
         effectSlider = 0.4
-        pathToMovie = ""
         
-        self.view.backgroundColor = UIColor.whiteColor()
-        gpuImage.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.redColor()
+        gpuImage.backgroundColor = UIColor.clearColor()
 
-        if let resourceUrl = NSBundle.mainBundle().URLForResource("do", withExtension: "mp4") {
+        if let resourceUrl = NSBundle.mainBundle().URLForResource("galaxy", withExtension: "mp4") {
             print(resourceUrl)
             if NSFileManager.defaultManager().fileExistsAtPath(resourceUrl.path!) {
                 backgroundMovie = GPUImageMovie.init(URL: resourceUrl)
@@ -50,24 +47,18 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
         swipeUp.direction = UISwipeGestureRecognizerDirection.Up
         gpuImage.addGestureRecognizer(swipeUp)
         
+        // Setup borderView
+        borderView.backgroundColor = UIColor.clearColor()
+        borderView.layer.borderColor = UIColor.whiteColor().CGColor
+        borderView.layer.borderWidth = 8
+        borderView.alpha = 0;
+
         // Setup camera processing
         setupCamera()
     }
-    
-    // Resume Processing
-    func resumeActivities() {
-        videoCamera?.startCameraCapture()
-        backgroundMovie.startProcessing()
-    }
-    
-    // Suspend processing
-    func stopActivities() {
-        videoCamera!.stopCameraCapture()
-        backgroundMovie.endProcessing()
-    }
-    
+        
     // Called on start
-    func setupCamera(){
+    func setupCamera() {
         videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSessionPresetHigh, cameraPosition: .Back)
         
         videoCamera!.outputImageOrientation = .Portrait;
@@ -90,11 +81,11 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
     func captureThis() {
         let image = (filter?.imageFromCurrentFramebuffer())!
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        flashBorderView()
         
         savedImage = image
-        
-        print("PIC TAKEN")
     }
     
     func takePhoto() {
@@ -109,6 +100,26 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
     func sharePhoto() {
         if (savedImage != nil) {
             FBSDKMessengerSharer.shareImage(savedImage, withOptions: nil)
+        }
+    }
+    
+    // Resume Processing
+    func resumeActivities() {
+        videoCamera?.startCameraCapture()
+        backgroundMovie.startProcessing()
+    }
+    
+    // Suspend processing
+    func stopActivities() {
+        videoCamera!.stopCameraCapture()
+        backgroundMovie.endProcessing()
+    }
+    
+    func flashBorderView() {
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.borderView.alpha = 1
+            }) { (Bool) -> Void in
+                self.borderView.alpha = 0;
         }
     }
     
