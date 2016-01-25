@@ -62,6 +62,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
         videoCamera = GPUImageVideoCamera(sessionPreset: AVCaptureSessionPresetHigh, cameraPosition: .Back)
         
         videoCamera!.outputImageOrientation = .Portrait;
+        videoCamera!.horizontallyMirrorFrontFacingCamera = true
         
         //Create the filter
         filter = GPUImageChromaKeyBlendFilter()
